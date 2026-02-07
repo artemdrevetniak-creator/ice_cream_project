@@ -1,3 +1,11 @@
+:root {
+	--main-bg: #000000;
+	--secondary-bg: #151515;
+	--primary-text: #ffffff;
+	--secondary-text: #fafafa;
+	--accent-color: #d23166;
+}
+
 *,
 *::before,
 *::after {
