@@ -13,30 +13,49 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<header>
-			<div>
-				<a href="#hero">
+		<header id="header" class="header">
+			<div class="container header-container">
+				<a href="#hero" class="header__logo logo logo-link">
 					<img src="./assets/icons/Logo.svg" alt="Vioty logo" />
 				</a>
 
-				<ul>
-					<li><a href="#hero">Main</a></li>
-					<li><a href="#about">About us</a></li>
-					<li><a href="#products">Trainers</a></li>
-					<li><a href="#app">App</a></li>
-				</ul>
-				<ul>
-					<li>
-						<a href="#"><img src="./assets/icons/inst.svg" alt="" /></a>
+				<nav class="navigation header__navigation">
+					<ul class="navigation__list">
+						<li class="navigation__item">
+							<a class="navigation__link" href="#hero">Main</a>
+						</li>
+						<li class="navigation__item">
+							<a class="navigation__link" href="#about">About us</a>
+						</li>
+						<li class="navigation__item">
+							<a class="navigation__link" href="#products">Trainers</a>
+						</li>
+						<li class="navigation__item">
+							<a class="navigation__link" href="#app">App</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul class="header__social-list social-list">
+					<li class="social-list__item">
+						<a class="social-list__link" href="#"
+							><img src="./assets/icons/inst.svg" alt=""
+						/></a>
 					</li>
-					<li>
-						<a href="#"><img src="./assets/icons/facebook.svg" alt="" /></a>
+					<li class="social-list__item">
+						<a class="social-list__link" href="#"
+							><img src="./assets/icons/facebook.svg" alt=""
+						/></a>
 					</li>
-					<li>
-						<a href="#"><img src="./assets/icons/twitter.svg" alt="" /></a>
+					<li class="social-list__item">
+						<a class="social-list__link" href="#"
+							><img src="./assets/icons/twitter.svg" alt=""
+						/></a>
 					</li>
-					<li>
-						<a href="#"><img src="./assets/icons/youtube.svg" alt="" /></a>
+					<li class="social-list__item">
+						<a class="social-list__link" href="#"
+							><img src="./assets/icons/youtube.svg" alt=""
+						/></a>
 					</li>
 				</ul>
 			</div>
@@ -44,99 +63,137 @@
 		<main>
 			<section id="hero" class="section hero hero-section">
 				<div class="container hero-container">
-					<div>
-						<p>Sweet fun, full of milk.</p>
-						<h1>Feel inside cold with our delicious ice-cream</h1>
-						<p>
+					<div class="hero__overview">
+						<p class="hero__subtitle">Sweet fun, full of milk.</p>
+						<h1 class="hero__title title-text">
+							Feel inside cold with our delicious ice-cream
+						</h1>
+						<p class="hero__description main-text">
 							Some food has looked so awful that it's looked like something that
 							the dog's brought home, yet after one mouthful I've been left
 							eating my thoughts, my words.
 						</p>
-						<button>Buy now</button>
+						<button class="hero__btn primary-btn">Buy now</button>
 					</div>
-					<div>
-						<img src="./assets/images/hero-img.png" alt="" />
+					<div class="hero__image-wrapper">
+						<img
+							class="hero__image"
+							src="./assets/images/hero-img.png"
+							alt=""
+						/>
 					</div>
 				</div>
 			</section>
 			<section id="about" class="section about about-section">
 				<div class="container about-container">
-					<div>
-						<p>
-							Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-							vulputate libero et velit interdum, ac aliquet odio mattis. Class
-							aptent taciti sociosqu ad litora torquent per conubia nostra, per
-							inceptos himenaeos.
-						</p>
-						<img src="./assets/images/img-pistachio.png" alt="" />
-						<img src="./assets/images/img-milk.png" alt="" />
-						<img src="./assets/images/img-strawberry.png" alt="" />
-					</div>
+					<p class="about__description title-text">
+						Porem ipsum dolor sit amet, consectetur adipiscing elit.
+						<span
+							>Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+							Class aptent taciti sociosqu ad litora torquent</span
+						>
+						per conubia nostra, per inceptos himenaeos.
+					</p>
+					<img
+						class="about__image about__image-pistachio"
+						src="./assets/images/img-pistachio.png"
+						alt=""
+					/>
+					<img
+						class="about__image about__image-milk"
+						src="./assets/images/img-milk.png"
+						alt=""
+					/>
+					<img
+						class="about__image about__image-strawberry"
+						src="./assets/images/img-strawberry.png"
+						alt=""
+					/>
 				</div>
 			</section>
 			<section id="products" class="section products products-section">
 				<div class="container products-container">
-					<div>
-						<h2>Our Product</h2>
-						<div>
-							<button>Left</button>
-							<button>Right</button>
+					<div class="products__title-wrapper">
+						<h2 class="products__title title-text">Our Product</h2>
+						<div class="products__navigation">
+							<button class="products__navigation-btn">Left</button>
+							<button class="products__navigation-btn">Right</button>
 						</div>
 					</div>
-					<ul>
-						<li>
-							<img src="./assets/images/product_1.png" alt="" />
-							<div>
-								<h3>Brown bread</h3>
-								<p>
+					<ul class="products__list">
+						<li class="products__item product">
+							<img
+								class="product__image"
+								src="./assets/images/product_1.png"
+								alt=""
+							/>
+							<div class="product__wrapper">
+								<h3 class="product__name">Brown bread</h3>
+								<p class="product__description">
 									Bon Au Pain is a pioneer in the healthy fast food scene.Bon
 								</p>
-								<p>$19.55 <sub>$22.55</sub></p>
-								<button>Buy now</button>
+								<p class="product__price">$19.55 <sub>$22.55</sub></p>
+								<button class="product__buy-btn">Buy now</button>
 							</div>
 						</li>
-						<li>
-							<img src="./assets/images/product_2.png" alt="" />
-							<div>
-								<h3>Brown bread</h3>
-								<p>
+						<li class="products__item product">
+							<img
+								class="product__image"
+								src="./assets/images/product_2.png"
+								alt=""
+							/>
+							<div class="product__wrapper">
+								<h3 class="product__name">Brown bread</h3>
+								<p class="product__description">
 									Bon Au Pain is a pioneer in the healthy fast food scene.Bon
 								</p>
-								<p>$19.55 <sub>$22.55</sub></p>
-								<button>Buy now</button>
+								<p class="product__price">$19.55 <sub>$22.55</sub></p>
+								<button class="product__buy-btn">Buy now</button>
 							</div>
 						</li>
-						<li>
-							<img src="./assets/images/product_3.png" alt="" />
-							<div>
-								<h3>Brown bread</h3>
-								<p>
+						<li class="products__item product">
+							<img
+								class="product__image"
+								src="./assets/images/product_3.png"
+								alt=""
+							/>
+							<div class="product__wrapper">
+								<h3 class="product__name">Brown bread</h3>
+								<p class="product__description">
 									Bon Au Pain is a pioneer in the healthy fast food scene.Bon
 								</p>
-								<p>$19.55 <sub>$22.55</sub></p>
-								<button>Buy now</button>
+								<p class="product__price">$19.55 <sub>$22.55</sub></p>
+								<button class="product__buy-btn">Buy now</button>
 							</div>
 						</li>
-						<li>
-							<img src="./assets/images/product_4.png" alt="" />
-							<div>
-								<h3>Brown bread</h3>
-								<p>
+						<li class="products__item product">
+							<img
+								class="product__image"
+								src="./assets/images/product_4.png"
+								alt=""
+							/>
+							<div class="product__wrapper">
+								<h3 class="product__name">Brown bread</h3>
+								<p class="product__description">
 									Bon Au Pain is a pioneer in the healthy fast food scene.Bon
 								</p>
-								<p>$19.55 <sub>$22.55</sub></p>
-								<button>Buy now</button>
+								<p class="product__price">$19.55 <sub>$22.55</sub></p>
+								<button class="product__buy-btn">Buy now</button>
 							</div>
 						</li>
-						<li>
-							<img src="./assets/images/product_5.png" alt="" />
-							<div>
-								<h3>Brown bread</h3>
-								<p>
+						<li class="products__item product">
+							<img
+								class="product__image"
+								src="./assets/images/product_5.png"
+								alt=""
+							/>
+							<div class="product__wrapper">
+								<h3 class="product__name">Brown bread</h3>
+								<p class="product__description">
 									Bon Au Pain is a pioneer in the healthy fast food scene.Bon
 								</p>
-								<p>$19.55 <sub>$22.55</sub></p>
-								<button>Buy now</button>
+								<p class="product__price">$19.55 <sub>$22.55</sub></p>
+								<button class="product__buy-btn">Buy now</button>
 							</div>
 						</li>
 					</ul>
@@ -144,99 +201,130 @@
 			</section>
 			<section id="app" class="section app app-section">
 				<div class="container app-container">
-					<div>
-						<h2>Simple way <span>to order</span> your food</h2>
-						<p>
+					<div class="app__overview">
+						<h2 class="app__title title-text">
+							Simple way <span>to order</span> your food
+						</h2>
+						<p class="app__description main-text">
 							Some food has looked so awful that it's looked like something that
 							the dog's brought home, yet after one mouthful I've been left
 							eating my thoughts, my words.
 						</p>
-						<ol>
-							<li>
-								<p><span>1</span> Select your food</p>
+						<ol class="app__steps steps">
+							<li class="steps__item">
+								<p class="steps__item-text main-text">
+									<span>1</span> Select your food
+								</p>
 							</li>
-							<li>
-								<p><span>2</span> Add to cart</p>
+							<li class="steps__item">
+								<p class="steps__item-text main-text">
+									<span>2</span> Add to cart
+								</p>
 							</li>
-							<li>
-								<p><span>3</span> Order your food</p>
+							<li class="steps__item">
+								<p class="steps__item-text main-text">
+									<span>3</span> Order your food
+								</p>
 							</li>
 						</ol>
-						<ul>
-							<li>
-								<a href="#">
+						<ul class="app__download-list download-list">
+							<li class="download-list__item">
+								<a class="download-list__link" href="#">
 									<img src="./assets/images/apple_store.png" alt="" />
 								</a>
 							</li>
-							<li>
-								<a href="#">
+							<li class="download-list__item">
+								<a class="download-list__link" href="#">
 									<img src="./assets/images/play_store.png" alt="" />
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div>
-						<img src="./assets/images/app.png" alt="" />
+					<div class="app__image-wrapper">
+						<img class="app__image" src="./assets/images/app.png" alt="" />
 					</div>
 				</div>
 			</section>
 			<section id="question" class="section question question-section">
 				<div class="container question-container">
-					<h2><span>Have Question</span> in Mind? Let us help you</h2>
-					<form>
-						<input type="text" placeholder="Enter your question" />
-						<button type="submit">Send</button>
+					<h2 class="question__title title-text">
+						<span>Have Question</span> in Mind? Let us help you
+					</h2>
+					<form class="question__form form">
+						<input
+							class="form-input"
+							type="text"
+							placeholder="Enter your question"
+						/>
+						<button class="form-submit" type="submit">Send</button>
 					</form>
 				</div>
 			</section>
 		</main>
 		<footer id="footer" class="footer">
 			<div class="container footer-container">
-				<div>
-					<img src="./assets/icons/Logo.svg" alt="Vioty logo" />
-					<p>
+				<div class="footer__panel panel">
+					<a href="#hero" class="foter__logo logo logo-link">
+						<img src="./assets/icons/Logo.svg" alt="Vioty logo" />
+					</a>
+					<p class="footer__text main-text">
 						Some food has looked so awful that it's looked like something that
 						the dog's brought home.
 					</p>
-					<ul>
-						<li>
-							<a href="#"><img src="./assets/icons/inst.svg" alt="" /></a>
+					<ul class="footer__social-list social-list">
+						<li class="social-list__item">
+							<a class="social-list__link" href="#"
+								><img src="./assets/icons/inst.svg" alt=""
+							/></a>
 						</li>
-						<li>
-							<a href="#"><img src="./assets/icons/facebook.svg" alt="" /></a>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#"
+								><img src="./assets/icons/facebook.svg" alt=""
+							/></a>
 						</li>
-						<li>
-							<a href="#"><img src="./assets/icons/twitter.svg" alt="" /></a>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#"
+								><img src="./assets/icons/twitter.svg" alt=""
+							/></a>
 						</li>
-						<li>
-							<a href="#"><img src="./assets/icons/youtube.svg" alt="" /></a>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#"
+								><img src="./assets/icons/youtube.svg" alt=""
+							/></a>
 						</li>
 					</ul>
 				</div>
-				<div>
-					<p>Menu</p>
-					<ul>
-						<li><a href="#hero">Main</a></li>
-						<li><a href="#about">About us</a></li>
-						<li><a href="#products">Trainers</a></li>
-						<li><a href="#app">App</a></li>
-					</ul>
+				<div class="footer__panel panel">
+					<p class="panel__title">Menu</p>
+					<nav class="navigation footer__navigation">
+						<ul class="navigation__list">
+							<li class="navigation__item">
+								<a class="navigation__link" href="#hero">Main</a>
+							</li>
+							<li class="navigation__item">
+								<a class="navigation__link" href="#about">About us</a>
+							</li>
+							<li class="navigation__item">
+								<a class="navigation__link" href="#products">Trainers</a>
+							</li>
+							<li class="navigation__item">
+								<a class="navigation__link" href="#app">App</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<div>
-					<address>
-						<p>Contacts</p>
-						<a href="tel:8314663000">831.466.3000</a>
-						<a href="mailto:info@basketball.com">info@basketball.com</a>
-					</address>
-				</div>
-				<div>
-					<address>
-						<p>location</p>
-						<a href="#">1347 Pacific Avenue, Suite 201</a>
-						<a href="#">Santa Cruz, CA, 95060</a>
-					</address>
-				</div>
-				<div></div>
+				<address class="footer__panel panel">
+					<p class="panel__title">Contacts</p>
+					<a class="panel__contact" href="tel:8314663000">831.466.3000</a>
+					<a class="panel__contact" href="mailto:info@basketball.com"
+						>info@basketball.com</a
+					>
+				</address>
+				<address class="footer__panel panel">
+					<p class="panel__title">location</p>
+					<a class="panel__contact" href="#">1347 Pacific Avenue, Suite 201</a>
+					<a class="panel__contact" href="#">Santa Cruz, CA, 95060</a>
+				</address>
 			</div>
 		</footer>
 	</body>
