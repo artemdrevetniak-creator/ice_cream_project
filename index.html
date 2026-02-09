@@ -66,7 +66,7 @@
 					<div class="hero__overview">
 						<p class="hero__subtitle">Sweet fun, full of milk.</p>
 						<h1 class="hero__title title-text">
-							Feel inside cold with our delicious ice-cream
+							Feel inside cold with our delicious <span>ice-cream</span>
 						</h1>
 						<p class="hero__description main-text">
 							Some food has looked so awful that it's looked like something that
@@ -116,8 +116,12 @@
 					<div class="products__title-wrapper">
 						<h2 class="products__title title-text">Our Product</h2>
 						<div class="products__navigation">
-							<button class="products__navigation-btn">Left</button>
-							<button class="products__navigation-btn">Right</button>
+							<button class="products__navigation-btn">
+								<img src="./assets/icons/left.svg" />
+							</button>
+							<button class="products__navigation-btn">
+								<img src="./assets/icons/right.svg" />
+							</button>
 						</div>
 					</div>
 					<ul class="products__list">
@@ -247,17 +251,19 @@
 			</section>
 			<section id="question" class="section question question-section">
 				<div class="container question-container">
-					<h2 class="question__title title-text">
-						<span>Have Question</span> in Mind? Let us help you
-					</h2>
-					<form class="question__form form">
-						<input
-							class="form-input"
-							type="text"
-							placeholder="Enter your question"
-						/>
-						<button class="form-submit" type="submit">Send</button>
-					</form>
+					<div class="question__inner-wrapper">
+						<h2 class="question__title title-text">
+							<span>Have Question</span> in Mind? Let us help you
+						</h2>
+						<form class="question__form form">
+							<input
+								class="form-input"
+								type="text"
+								placeholder="Enter your question"
+							/>
+							<button class="form-submit" type="submit">Send</button>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
