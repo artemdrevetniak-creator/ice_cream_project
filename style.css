@@ -77,7 +77,42 @@ button {
 	line-height: 1.5;
 }
 
+.section {
+	padding-block: 60px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 96px;
+}
+
 /* !!! HEADER STYLES !!! */
+
+.header {
+	height: 132px;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation__list,
+.header__social-list {
+	list-style: none;
+}
+
+.navigation__list {
+	max-width: 507px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex: 1 0 auto;
+	gap: 16px;
+}
 
 /* !!! HERO SECTION STYLES !!! */
 
@@ -101,6 +136,10 @@ button {
 
 /* !!! ABOUT SECTION STYLES !!! */
 
+.about-container {
+	position: relative;
+}
+
 .about__description {
 	text-align: center;
 }
@@ -109,9 +148,12 @@ button {
 	opacity: 20%;
 }
 .about__image {
+	position: absolute;
 	aspect-ratio: 1/1; /* робить сторони одинаковими як в квадраті (ширина елементу = висоті елементу) */
 }
 .about__image-pistachio {
+	top: 0;
+	left: 991px;
 	width: 137px;
 }
 .about__image-milk {
