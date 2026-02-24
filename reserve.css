@@ -44,7 +44,6 @@ img {
 }
 
 a {
-	display: inline-block;
 	color: inherit;
 	text-decoration: none;
 }
@@ -61,24 +60,8 @@ button {
 	border-radius: 5px;
 }
 
-ul,
-ol {
-	list-style: none;
-}
-
-.section {
-	padding-block: 60px;
-}
-
-.container {
-	width: 100%;
-	max-width: 1440px;
-	margin-inline: auto;
-	padding-inline: 96px;
-}
-
 .title-text {
-	font-family: 'Alexandria', sans-serif;
+	font-family: 'Alexandria';
 	font-weight: 400;
 	font-size: 57.33px;
 	line-height: 0.94;
@@ -94,108 +77,115 @@ ol {
 	line-height: 1.5;
 }
 
+.section {
+	padding-block: 60px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 96px;
+}
+
 /* !!! HEADER STYLES !!! */
 
 .header {
-	padding-block: 40px;
+	height: 132px;
 }
+
 .header-container {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-}
-.navigation__list {
-	display: flex;
-	gap: 95px;
-}
-.social-list {
-	display: flex;
-	gap: 15px;
-}
-.social-list__link {
-	width: 36px;
-	height: 36px;
-	display: flex;
 	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation__list,
+.header__social-list {
+	list-style: none;
+}
+
+.navigation__list {
+	max-width: 507px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex: 1 0 auto;
+	gap: 16px;
 }
 
 /* !!! HERO SECTION STYLES !!! */
 
-.hero-container {
-	display: flex;
-	justify-content: space-between;
-}
-.hero__overview {
-	max-width: 587px;
-}
-.hero__image-wrapper {
-	max-width: 588px;
-}
 .hero__subtitle {
 	margin-bottom: 20px;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1;
-	letter-spacing: 1.4px;
 }
 .hero__title {
 	margin-bottom: 16px;
 }
 .hero__description {
 	margin-bottom: 48px;
-	opacity: 60%;
 }
 .hero__btn {
-	max-width: 165px;
-	width: 100%;
-	padding-block: 13.5px;
 	font-weight: 700;
+	padding: 13.5px 50px;
+}
+.hero__image-wrapper {
+	width: 588px;
+	aspect-ratio: 1/1;
 }
 
 /* !!! ABOUT SECTION STYLES !!! */
 
 .about-container {
 	position: relative;
-	padding-top: 69px;
-	padding-bottom: 45px;
 }
+
 .about__description {
 	text-align: center;
 }
-.about__description span {
-	color: #ffffff20;
+.about__description.title-text span {
+	color: var(--primary-text);
+	opacity: 20%;
 }
 .about__image {
 	position: absolute;
+	aspect-ratio: 1/1; /* робить сторони одинаковими як в квадраті (ширина елементу = висоті елементу) */
 }
 .about__image-pistachio {
-	right: 216px;
 	top: 0;
+	left: 991px;
+	width: 137px;
 }
 .about__image-milk {
-	top: 170px;
-	left: 129px;
+	width: 144px;
 }
 .about__image-strawberry {
-	bottom: 0;
-	left: 720px;
+	width: 90px;
 }
 
 /* !!! PRODUCTS SECTION STYLES !!! */
 
-.products-container {
-	overflow: hidden;
+.products__title-wrapper {
+	margin-bottom: 56px;
+}
+.products__navigation-btn {
+	border-radius: 50%;
+	padding: 12px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.products__navigation-btn svg {
+	display: block;
 }
 .products__list {
 	display: flex;
+	list-style: none;
 	gap: 20px;
+	flex-wrap: wrap;
 }
-.products__item {
+.product {
+	display: flex;
+	flex-direction: column;
 	flex-basis: 297px;
-	flex-shrink: 0;
 }
 .product__image {
 	width: 100%;
@@ -205,21 +195,22 @@ ol {
 	border-radius: 20px;
 }
 .product__wrapper {
-	position: relative;
-	top: -24px;
+	display: flex;
+	flex-direction: column;
 	padding: 24px 30px;
 	background-color: var(--secondary-bg);
 	border-radius: 20px;
+	flex-grow: 1;
 }
 .product__name {
 	font-family: 'Hind Madurai', sans-serif;
 	font-weight: 700;
 	font-size: 26px;
+	line-height: 1;
 	margin-bottom: 18px;
 }
 .product__description {
-	font-size: 16px;
-	line-height: 24px;
+	flex-grow: 1;
 	opacity: 70%;
 	margin-bottom: 28px;
 }
@@ -239,12 +230,59 @@ ol {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1;
-	padding: 16.5px 0;
+	padding: 15px 0;
 	width: 100%;
 }
 
 /* !!! APP SECTION STYLES !!! */
 
+.app__title {
+	margin-bottom: 16px;
+}
+.app__description {
+	font-size: 18px;
+	line-height: 1.5;
+	opacity: 60%;
+	margin-bottom: 64px;
+}
+.steps {
+	margin-bottom: 48px;
+}
+.steps__item:not(:last-child) {
+	margin-bottom: 26px;
+}
+.steps__item-text {
+	font-size: 18px;
+	line-height: 1.5;
+	opacity: 60%;
+}
+.steps__item-text span {
+	display: inline-block;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 48px;
+	aspect-ratio: 1/1;
+}
+.app__image-wrapper {
+	width: 782px;
+	height: 810px;
+}
+
 /* !!! QUESTION SECTION STYLES !!! */
 
+.question-section {
+	height: 100svh;
+}
+.question__inner-wrapper {
+	max-width: 653px;
+}
+.question__title {
+	text-align: center;
+	margin-bottom: 56px;
+}
+
 /* !!! FOOTER STYLES !!! */
+
+.footer {
+	background-color: var(--secondary-bg);
+}
